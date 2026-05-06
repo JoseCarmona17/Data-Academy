@@ -4,6 +4,8 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Cursos from './pages/Cursos'
 import SobreMi from './pages/SobreMi'
+import Politicas from './pages/Politicas'
+import CourseDetail from './pages/CourseDetail'
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cursos" element={<Cursos />} />
+            <Route path="/cursos/:id" element={<CourseDetail />} />
             <Route path="/sobre-mi" element={<SobreMi />} />
+            <Route path="/politicas" element={<Politicas />} />
           </Routes>
         </main>
         <Footer />

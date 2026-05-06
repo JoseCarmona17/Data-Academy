@@ -3,14 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { Menu, X, Rocket } from 'lucide-react'
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const navLinkClass = ({ isActive }) =>
     isActive
@@ -19,21 +12,16 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-navy/5 border-b border-slate-100'
-          : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-lg shadow-navy/5 border-b border-slate-100"
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-300">
-            <Rocket className="text-white w-6 h-6" />
-          </div>
-          <span className="font-bold text-navy text-lg tracking-tight">
-            Professional <span className="text-primary">Data Academy</span>
-          </span>
+        <Link to="/" className="flex items-center group">
+          <img 
+            src="/logo2.png" 
+            alt="EXCELSIOR Logo" 
+            className="h-12 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300" 
+          />
         </Link>
 
         {/* Desktop Nav */}

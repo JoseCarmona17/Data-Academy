@@ -8,13 +8,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                <Rocket className="text-white w-6 h-6" />
-              </div>
-              <span className="font-bold text-white text-lg tracking-tight">
-                Professional <span className="text-primary">Data Academy</span>
-              </span>
+            <div className="flex items-center mb-6">
+              <img src="/logo2.png" alt="EXCELSIOR Logo" className="h-12 md:h-16 w-auto object-contain" />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
               Potenciamos tu carrera a través del dominio estratégico de los datos. La academia líder para profesionales que buscan impacto real.
@@ -49,8 +44,8 @@ export default function Footer() {
             <h4 className="text-white font-bold text-sm mb-6 uppercase tracking-wider">Soporte</h4>
             <ul className="space-y-4">
               <li><a href="#" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Centro de Ayuda</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Privacidad</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Términos</a></li>
+              <li><Link to="/politicas" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Privacidad</Link></li>
+              <li><Link to="/politicas" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Términos y Condiciones</Link></li>
               <li><a href="#" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Contacto</a></li>
             </ul>
           </div>
@@ -61,7 +56,7 @@ export default function Footer() {
       <div className="border-t border-white/5 py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <p className="text-slate-500 text-xs font-medium">
-            © {new Date().getFullYear()} Professional Data Academy. Todos los derechos reservados.
+            © {new Date().getFullYear()} EXCELSIOR. Todos los derechos reservados.
           </p>
           <p className="text-slate-500 text-xs font-medium italic">
             Master your data, transform your career.
