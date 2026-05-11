@@ -11,6 +11,7 @@ import {
   Users,
   Info
 } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 import { courses } from '../data/courses'
 
 const learningItems = [
@@ -120,6 +121,72 @@ export default function Cursos() {
             {courses.map((c) => (
               <CourseItem key={c.title} c={c} />
             ))}
+            
+            {/* Manual Card for Personalized Classes */}
+            <div className="group flex flex-col bg-navy rounded-[2rem] border-2 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 border-white/10 hover:border-primary/40 relative overflow-hidden h-full">
+              <div className="absolute top-4 left-4 z-10">
+                <span className="text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest bg-primary text-white shadow-sm">
+                  Premium
+                </span>
+              </div>
+              <div className="relative h-48 lg:h-56 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200" 
+                  alt="Clases Personalizadas" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent"></div>
+              </div>
+
+              <div className="p-5 lg:p-6 flex-1 flex flex-col bg-navy">
+                <div className="flex justify-between items-start mb-2">
+                  <div className="flex items-center gap-1 text-yellow-500">
+                    <Star className="w-3.5 h-3.5 fill-current" />
+                    <span className="text-xs font-bold text-white">5.0</span>
+                  </div>
+                  <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest text-right">Personalizado</div>
+                </div>
+
+                <h2 className="text-lg font-bold text-white group-hover:text-primary transition-colors min-h-[2.5rem] lg:min-h-[3rem] leading-tight mb-2">
+                  Asesoría y Clases 1-a-1 Personalizadas
+                </h2>
+
+                <p className="text-slate-400 text-xs lg:text-sm leading-relaxed mb-6">
+                  Sesiones individuales enfocadas en tus necesidades reales y proyectos corporativos.
+                </p>
+
+                <div className="mt-auto space-y-4">
+                  <div className="flex items-center gap-2.5 text-xs lg:text-sm text-slate-300 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
+                    <span>Tus propios datos</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs lg:text-sm text-slate-300 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
+                    <span>Horarios flexibles</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-5 pt-0 bg-navy">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-white/10 pt-5">
+                  <div>
+                    <p className="text-lg lg:text-xl font-bold text-white tracking-tight">Consultar</p>
+                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Inversión</p>
+                  </div>
+                  <div className="w-full sm:w-auto">
+                    <a
+                      href="https://wa.me/573000000000?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto px-6 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-green-500/10 flex items-center justify-center gap-2 text-[11px]"
+                    >
+                      <FaWhatsapp className="text-xl" />
+                      Consultar
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -130,7 +197,7 @@ export default function Cursos() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-2xl lg:text-5xl font-bold mb-6 lg:mb-8 leading-tight text-white">
-                Lo que aprenderás en <span className="text-primary">EXCELSIOR</span>
+                Lo que aprenderás en <span className="text-primary">EXCELSIOR UNLIMITED</span>
               </h2>
               <p className="text-slate-400 text-base lg:text-lg mb-8 lg:mb-12">
                 Nuestro enfoque pedagógico está centrado en la resolución de problemas reales, asegurando que cada lección tenga una aplicación directa en tu trabajo.

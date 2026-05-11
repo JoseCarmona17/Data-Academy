@@ -16,12 +16,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center group">
+        <Link to="/" className="flex items-center gap-2 group">
           <img 
             src="/logo2.png" 
-            alt="EXCELSIOR Logo" 
+            alt="EXCELSIOR UNLIMITED Logo" 
             className="h-12 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300" 
           />
+          <span className="text-xl font-black tracking-tighter text-navy group-hover:text-primary transition-colors duration-300">
+            UNLIMITED
+          </span>
         </Link>
 
         {/* Desktop Nav */}

@@ -40,7 +40,7 @@ const specialties = [
 const timeline = [
   { year: '2010–2015', title: 'Analista Senior en Corporativo', desc: 'Lideré proyectos de inteligencia de negocios en empresas Fortune 500, transformando datos en decisiones estratégicas.' },
   { year: '2015–2020', title: 'Head of Business Intelligence', desc: 'Dirigí equipos de 15+ analistas, implementando pipelines de datos y dashboards ejecutivos de alto impacto.' },
-  { year: '2020–Hoy', title: 'Fundador de EXCELSIOR', desc: 'Creé la academia para democratizar el análisis de datos y cerrar la brecha entre la academia y la industria.' },
+  { year: '2020–Hoy', title: 'Fundador de EXCELSIOR UNLIMITED', desc: 'Creé la academia para democratizar el análisis de datos y cerrar la brecha entre la academia y la industria.' },
 ]
 
 export default function SobreMi() {

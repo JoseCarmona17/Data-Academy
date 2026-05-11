@@ -46,7 +46,7 @@ export default function Politicas() {
               <div className="space-y-4">
                 <div>
                   <h3 className="font-bold text-navy">2.1 Propiedad Intelectual</h3>
-                  <p>Todo el contenido disponible en EXCELSIOR (videos, guías, plantillas de Excel, códigos de Power BI) es propiedad intelectual de su respectivo autor y está protegido por las leyes de derecho de autor nacionales e internacionales. Está prohibida su reproducción total o parcial, así como su distribución sin autorización previa.</p>
+                  <p>Todo el contenido disponible en EXCELSIOR UNLIMITED (videos, guías, plantillas de Excel, códigos de Power BI) es propiedad intelectual de su respectivo autor y está protegido por las leyes de derecho de autor nacionales e internacionales. Está prohibida su reproducción total o parcial, así como su distribución sin autorización previa.</p>
                 </div>
                 <div>
                   <h3 className="font-bold text-navy">2.2 Acceso al Contenido</h3>

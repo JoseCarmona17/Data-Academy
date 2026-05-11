@@ -15,8 +15,11 @@ import {
   Star,
   Monitor,
   ArrowRight,
-  Info
+  Info,
+  CheckCircle2,
+  Mail
 } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 import { courses } from '../data/courses'
 
 const tools = [
@@ -24,26 +27,23 @@ const tools = [
   { name: 'Power BI', icon: <BarChart3 className="w-6 h-6" />, color: 'from-yellow-400 to-orange-500' },
   { name: 'Google Sheets', icon: <FileSpreadsheet className="w-6 h-6" />, color: 'from-blue-400 to-blue-600' },
   { name: 'Looker Studio', icon: <Search className="w-6 h-6" />, color: 'from-purple-400 to-purple-600' },
-  { name: 'Análisis de Datos', icon: <Calculator className="w-6 h-6" />, color: 'from-primary-light to-primary' },
-  { name: 'Ofimática Pro', icon: <Briefcase className="w-6 h-6" />, color: 'from-slate-400 to-slate-600' },
+  { name: 'Análisis y visualización de datos', icon: <Calculator className="w-6 h-6" />, color: 'from-primary-light to-primary' },
+  // { name: 'Ofimática Pro', icon: <Briefcase className="w-6 h-6" />, color: 'from-slate-400 to-slate-600' },
+  { name: 'Clases personalizadas', icon: <Briefcase className="w-6 h-6" />, color: 'from-slate-400 to-slate-600' }
 ]
 
 const methodology = [
   {
     icon: <Target className="w-8 h-8 text-primary" />,
-    title: 'Aprendizaje Basado en Proyectos',
-    desc: 'No solo teoría. Trabajarás en casos reales desde el primer día.',
+    title: 'Aprende según tus necesidades',
+    desc: 'Adaptamos la enseñanza a tu caso real.',
   },
   {
     icon: <MessageSquare className="w-8 h-8 text-primary" />,
     title: 'Feedback Personalizado',
     desc: 'Tus entregas son revisadas por expertos con años de experiencia corporativa.',
   },
-  {
-    icon: <Award className="w-8 h-8 text-primary" />,
-    title: 'Certificación con Valor',
-    desc: 'Recibe un certificado que demuestra tu dominio de las herramientas más demandadas.',
-  },
+
 ]
 
 const stats = [
@@ -105,9 +105,9 @@ export default function Home() {
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6 text-navy">
-              Domina el análisis de datos con{' '}
+              Domina el análisis y visualización de datos con{' '}
               <span className="text-primary">
-                EXCELSIOR
+                EXCELSIOR UNLIMITED
               </span>
             </h1>
 
@@ -219,6 +219,44 @@ export default function Home() {
             {courses.map((c) => (
               <CourseCard key={c.title} course={c} />
             ))}
+            
+            {/* Manual Card for Personalized Classes */}
+            <div className="group bg-navy rounded-[2rem] border border-white/10 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 flex flex-col h-full relative">
+              <div className="absolute top-4 left-4 z-10">
+                <span className="text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm bg-primary text-white">
+                  Premium
+                </span>
+              </div>
+              <div className="relative h-48 lg:h-56 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200" 
+                  alt="Clases Personalizadas" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent"></div>
+                <div className="absolute bottom-4 left-6">
+                  <p className="text-white font-bold text-lg lg:text-xl leading-tight">Clases Personalizadas</p>
+                </div>
+              </div>
+              
+              <div className="p-5 lg:p-6 flex flex-col flex-grow bg-navy">
+                <p className="text-slate-400 text-xs lg:text-sm leading-relaxed mb-6">
+                  Sesiones 1-a-1 diseñadas para resolver tus retos específicos con tus propios datos.
+                </p>
+
+                <div className="mt-auto space-y-3">
+                  <a
+                    href="https://wa.me/573000000000?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-2.5 lg:py-3 bg-[#25D366] hover:bg-[#20ba5a] text-white text-center text-[11px] lg:text-xs font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    <FaWhatsapp className="text-xl" />
+                    Más Información
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -252,6 +290,83 @@ export default function Home() {
                 alt="Collaboration" 
                 className="relative rounded-3xl shadow-2xl z-10 w-full max-w-md lg:max-w-none h-auto"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CLASES PERSONALIZADAS ── */}
+      <section id="personalizadas" className="py-16 lg:py-24 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-slate-50 rounded-[3rem] p-8 lg:p-16 border border-slate-200 shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-6">
+                  <span className="text-primary text-[10px] lg:text-xs font-bold uppercase tracking-widest">Servicio Premium</span>
+                </div>
+                <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-6 leading-tight">
+                  ¿Necesitas un enfoque <span className="text-primary">100% a tu medida?</span>
+                </h2>
+                <p className="text-slate-500 text-base lg:text-xl leading-relaxed mb-8">
+                  Ofrecemos clases personalizadas y mentorías uno a uno diseñadas para resolver tus desafíos específicos en el trabajo o proyectos propios. 
+                  Aprende a tu ritmo, con tus propios datos y con un experto a tu disposición.
+                </p>
+                
+                <ul className="space-y-4 mb-10">
+                  {[
+                    'Resolución de dudas específicas en tiempo real',
+                    'Asesoría técnica para proyectos corporativos',
+                    'Horarios flexibles que se adaptan a ti',
+                    'Enfoque práctico en tus propios archivos de datos'
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-3 text-navy font-medium text-sm lg:text-base">
+                      <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                        <CheckCircle2 className="w-3 h-3 text-primary" />
+                      </div>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a 
+                    href="https://wa.me/573000000000?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas." 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="px-8 py-4 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-2xl transition-all duration-300 shadow-xl shadow-green-500/20 flex items-center justify-center gap-3 group"
+                  >
+                    <FaWhatsapp className="text-3xl" />
+                    Contactar WhatsApp
+                  </a>
+                  <a 
+                    href="mailto:info@excelsiorunlimited.com?subject=Consulta%20Clases%20Personalizadas" 
+                    className="px-8 py-4 bg-white text-navy font-bold rounded-2xl transition-all duration-300 border border-slate-200 hover:border-primary/30 hover:bg-slate-50 flex items-center justify-center gap-3"
+                  >
+                    <Mail className="w-6 h-6 text-primary" />
+                    Enviar Correo
+                  </a>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl opacity-50"></div>
+                <div className="relative bg-white p-4 rounded-[2.5rem] shadow-2xl border border-slate-100">
+                  <img 
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200" 
+                    alt="Clases Personalizadas" 
+                    className="rounded-[2rem] w-full h-auto object-cover aspect-video"
+                  />
+                  <div className="absolute -bottom-6 -right-6 bg-navy text-white p-6 rounded-3xl shadow-xl max-w-[200px]">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Próxima sesión</span>
+                    </div>
+                    <p className="text-sm font-bold leading-tight">Agenda hoy mismo tu mentoría individual.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
