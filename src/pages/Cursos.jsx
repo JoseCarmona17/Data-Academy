@@ -5,10 +5,8 @@ import {
   Settings,
   Layout,
   Database,
-  ArrowRight,
   Star,
   Clock,
-  Users,
   Info
 } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
@@ -69,7 +67,7 @@ function CourseItem({ c }) {
         </div>
       </div>
 
-      <div className="p-5 l pt-0">
+      <div className="p-5 pt-0">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div>
             <p className="text-lg lg:text-xl font-bold text-navy tracking-tight">{c.price}</p>
@@ -212,12 +210,12 @@ export default function Cursos() {
                 ))}
               </div>
             </div>
-            <div className="relative flex items-center justify-center lg:justify-end order-1 lg:order-2">
+            <div className="hidden lg:flex relative items-center justify-end order-1 lg:order-2">
               <div className="absolute -inset-10 bg-primary/20 rounded-full blur-[100px] opacity-30 animate-pulse"></div>
               <img
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200"
                 alt="Data Visualization"
-                className="relative rounded-[2rem] lg:rounded-[2.5rem] shadow-2xl z-10 border border-white/10 w-full max-w-md lg:max-w-none h-auto"
+                className="relative rounded-[2rem] lg:rounded-[2.5rem] shadow-2xl z-10 border border-white/10 w-full max-w-none h-auto"
               />
             </div>
           </div>
@@ -234,9 +232,14 @@ export default function Cursos() {
             Ofrecemos capacitaciones corporativas diseñadas a medida según las necesidades específicas de tu organización.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 lg:px-10 py-3 lg:py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all duration-300 shadow-xl shadow-primary/20 hover:-translate-y-1 text-sm lg:text-base">
+            <a
+              href="https://wa.me/573000000000?text=Hola!%20Me%20gustaría%20información%20sobre%20capacitaciones%20corporativas."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 lg:px-10 py-3 lg:py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all duration-300 shadow-xl shadow-primary/20 hover:-translate-y-1 text-sm lg:text-base flex items-center justify-center gap-2"
+            >
               Contactar Ventas
-            </button>
+            </a>
             <Link to="/sobre-mi" className="px-8 lg:px-10 py-3 lg:py-4 border-2 border-slate-200 hover:border-primary/30 text-navy font-bold rounded-xl transition-all duration-300 hover:bg-slate-50 text-sm lg:text-base">
               Conocer al instructor
             </Link>

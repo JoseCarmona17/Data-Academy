@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import { FaWhatsapp } from 'react-icons/fa'
 import Home from './pages/Home'
 import Cursos from './pages/Cursos'
@@ -11,6 +12,7 @@ import CourseDetail from './pages/CourseDetail'
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">

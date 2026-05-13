@@ -8,16 +8,12 @@ import {
   Briefcase,
   Target,
   MessageSquare,
-  Award,
-  Users,
   Clock,
   ChevronRight,
   Star,
   Monitor,
-  ArrowRight,
   Info,
-  CheckCircle2,
-  Mail
+  CheckCircle2
 } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
 import { courses } from '../data/courses'
@@ -338,14 +334,7 @@ export default function Home() {
                     className="px-8 py-4 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-2xl transition-all duration-300 shadow-xl shadow-green-500/20 flex items-center justify-center gap-3 group"
                   >
                     <FaWhatsapp className="text-3xl" />
-                    Contactar WhatsApp
-                  </a>
-                  <a 
-                    href="mailto:info@excelsiorunlimited.com?subject=Consulta%20Clases%20Personalizadas" 
-                    className="px-8 py-4 bg-white text-navy font-bold rounded-2xl transition-all duration-300 border border-slate-200 hover:border-primary/30 hover:bg-slate-50 flex items-center justify-center gap-3"
-                  >
-                    <Mail className="w-6 h-6 text-primary" />
-                    Enviar Correo
+                    Contactar por WhatsApp
                   </a>
                 </div>
               </div>
@@ -394,12 +383,12 @@ export default function Home() {
             >
               Explorar cursos
             </Link>
-            <Link
-              to="/sobre-mi"
+            <a
+              href="#personalizadas"
               className="px-8 lg:px-10 py-3 lg:py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 backdrop-blur-sm text-sm lg:text-base"
             >
               Contactar asesor
-            </Link>
+            </a>
           </div>
         </div>
       </section>
