@@ -21,7 +21,7 @@ export default function Footer() {
               <a href="https://www.linkedin.com/in/javier-contreras-analista-de-datos/" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-primary transition-colors text-xl" aria-label="LinkedIn">
                 <FaLinkedin />
               </a>
-              <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-[#25D366] transition-colors text-xl" aria-label="WhatsApp">
+              <a href="https://wa.me/573003085247" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-[#25D366] transition-colors text-xl" aria-label="WhatsApp">
                 <FaWhatsapp />
               </a>
             </div>

@@ -173,7 +173,7 @@ export default function Cursos() {
                   </div>
                   <div className="w-full sm:w-auto">
                     <a
-                      href="https://wa.me/573000000000?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas."
+                      href="https://wa.me/573003085247?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full sm:w-auto px-6 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-green-500/10 flex items-center justify-center gap-2 text-[11px]"
@@ -233,7 +233,7 @@ export default function Cursos() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/573000000000?text=Hola!%20Me%20gustaría%20información%20sobre%20capacitaciones%20corporativas."
+              href="https://wa.me/573003085247?text=Hola!%20Me%20gustaría%20información%20sobre%20capacitaciones%20corporativas."
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 lg:px-10 py-3 lg:py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all duration-300 shadow-xl shadow-primary/20 hover:-translate-y-1 text-sm lg:text-base flex items-center justify-center gap-2"

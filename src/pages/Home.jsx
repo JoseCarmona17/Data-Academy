@@ -242,7 +242,7 @@ export default function Home() {
 
                 <div className="mt-auto space-y-3">
                   <a
-                    href="https://wa.me/573000000000?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas."
+                    href="https://wa.me/573003085247?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-2.5 lg:py-3 bg-[#25D366] hover:bg-[#20ba5a] text-white text-center text-[11px] lg:text-xs font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
@@ -328,7 +328,7 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="https://wa.me/573000000000?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas." 
+                    href="https://wa.me/573003085247?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas." 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-2xl transition-all duration-300 shadow-xl shadow-green-500/20 flex items-center justify-center gap-3 group"
