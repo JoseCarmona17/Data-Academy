@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 export default function Politicas() {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash.replace('#', ''))
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    }
+  }, [hash])
+
   return (
     <div className="pt-32 pb-20 bg-slate-50 min-h-screen">
       <div className="max-w-4xl mx-auto px-6">
@@ -10,7 +24,7 @@ export default function Politicas() {
           <div className="prose prose-slate max-w-none space-y-12 text-slate-600">
             
             {/* ── SECCIÓN 1: PRIVACIDAD ── */}
-            <section>
+            <section id="privacidad" className="scroll-mt-32">
               <h2 className="text-2xl font-bold text-navy mb-4 flex items-center gap-3">
                 <span className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-sm">01</span>
                 Política de Privacidad (Habeas Data)
@@ -38,7 +52,7 @@ export default function Politicas() {
             </section>
 
             {/* ── SECCIÓN 2: TÉRMINOS Y CONDICIONES ── */}
-            <section>
+            <section id="terminos" className="scroll-mt-32">
               <h2 className="text-2xl font-bold text-navy mb-4 flex items-center gap-3">
                 <span className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-sm">02</span>
                 Términos y Condiciones de Uso
@@ -60,7 +74,7 @@ export default function Politicas() {
             </section>
 
             {/* ── SECCIÓN 3: E-COMMERCE ── */}
-            <section>
+            <section id="compras" className="scroll-mt-32">
               <h2 className="text-2xl font-bold text-navy mb-4 flex items-center gap-3">
                 <span className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-sm">03</span>
                 Condiciones de Compra y Retracto

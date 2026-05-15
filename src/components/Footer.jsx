@@ -43,8 +43,8 @@ export default function Footer() {
             <h4 className="text-white font-bold text-sm mb-6 uppercase tracking-wider">Soporte</h4>
             <ul className="space-y-4">
               {/* <li><a href="#" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Centro de Ayuda</a></li> */}
-              <li><Link to="/politicas" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Privacidad</Link></li>
-              <li><Link to="/politicas" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Términos y Condiciones</Link></li>
+              <li><Link to="/politicas#privacidad" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Privacidad</Link></li>
+              <li><Link to="/politicas#terminos" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Términos y Condiciones</Link></li>
               <li><Link to="/sobre-mi" className="text-slate-400 hover:text-primary text-sm font-medium transition-colors">Contacto</Link></li>
             </ul>
           </div>

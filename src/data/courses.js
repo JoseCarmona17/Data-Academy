@@ -8,7 +8,7 @@ import {
 export const courses = [
   {
     id: 'excel-completo',
-    title: 'Excel Completo: de Cero a Macros Grabadas (+5 Horas y 28 Clases)',
+    title: 'Microsoft Excel Completo: de Cero a Macros Grabadas (+5 Horas y 28 Clases)',
     image: '/curso1.jpeg',
     level: 'Todos los niveles',
     hours: '+5h',
