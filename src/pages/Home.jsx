@@ -152,7 +152,7 @@ export default function Home() {
       </section>
 
       {/* ── STATS BAR ── */}
-      <section className="bg-slate-50 border-y border-slate-200/60">
+      {/* <section className="bg-slate-50 border-y border-slate-200/60">
         <div className="max-w-7xl mx-auto px-6 py-8 lg:py-12">
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
@@ -173,7 +173,7 @@ export default function Home() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* ── TOOLS ── */}
       <section className="py-16 lg:py-24 bg-white">
