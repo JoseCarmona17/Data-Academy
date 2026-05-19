@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import { 
-  BarChart3, 
-  TrendingUp, 
-  FileSpreadsheet, 
-  Search, 
-  Calculator, 
+import {
+  BarChart3,
+  TrendingUp,
+  FileSpreadsheet,
+  Search,
+  Calculator,
   Briefcase,
   Target,
   MessageSquare,
@@ -43,7 +43,6 @@ const methodology = [
 ]
 
 const stats = [
-  { value: '15,000+', label: 'Estudiantes activos' },
   { value: '4.9/5', label: 'Valoración promedio' },
   { value: '+40%', label: 'Aumento salarial avg.' },
   { value: '95%', label: 'Tasa de satisfacción' },
@@ -53,9 +52,9 @@ function CourseCard({ course }) {
   return (
     <div className="group bg-white rounded-[2rem] border border-slate-200 overflow-hidden hover:shadow-2xl hover:shadow-navy/5 transition-all duration-300 flex flex-col h-full">
       <Link to={`/cursos/${course.id}`} className="relative h-48 lg:h-56 overflow-hidden">
-        <img 
-          src={course.image} 
-          alt={course.title} 
+        <img
+          src={course.image}
+          alt={course.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute top-4 left-4">
@@ -64,7 +63,7 @@ function CourseCard({ course }) {
           </span>
         </div>
       </Link>
-      
+
       <div className="p-5 lg:p-6 flex flex-col flex-grow">
         <Link to={`/cursos/${course.id}`} className="block mb-2 lg:mb-3">
           <h3 className="font-bold text-navy text-base lg:text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2 min-h-[2.5rem] lg:min-h-[3rem]">
@@ -131,9 +130,9 @@ export default function Home() {
           <div className="relative order-first lg:order-last">
             <div className="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl rotate-3"></div>
             <div className="relative bg-white p-3 lg:p-4 rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
-              <img 
-                src="/hero-dashboard.png" 
-                alt="Data Analysis Dashboard" 
+              <img
+                src="/hero-dashboard.png"
+                alt="Data Analysis Dashboard"
                 className="rounded-2xl w-full h-auto object-cover aspect-[4/3]"
               />
               <div className="absolute top-4 lg:top-8 right-4 lg:right-8 bg-white/90 backdrop-blur-md p-3 lg:p-4 rounded-2xl shadow-xl border border-white/50 animate-bounce-slow">
@@ -154,13 +153,25 @@ export default function Home() {
 
       {/* ── STATS BAR ── */}
       <section className="bg-slate-50 border-y border-slate-200/60">
-        <div className="max-w-7xl mx-auto px-6 py-8 lg:py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center md:text-left md:border-l border-slate-200 first:border-0 md:pl-8">
-              <p className="text-2xl lg:text-4xl font-bold text-navy mb-1">{s.value}</p>
-              <p className="text-slate-500 text-xs lg:text-sm font-medium">{s.label}</p>
-            </div>
-          ))}
+        <div className="max-w-7xl mx-auto px-6 py-8 lg:py-12">
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
+            {stats.map((s) => (
+              <div
+                key={s.label}
+                className="text-center w-full"
+              >
+                <p className="text-2xl lg:text-4xl font-bold text-navy mb-1">
+                  {s.value}
+                </p>
+
+                <p className="text-slate-500 text-xs lg:text-sm font-medium">
+                  {s.label}
+                </p>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 
@@ -215,7 +226,7 @@ export default function Home() {
             {courses.map((c) => (
               <CourseCard key={c.title} course={c} />
             ))}
-            
+
             {/* Manual Card for Personalized Classes */}
             <div className="group bg-navy rounded-[2rem] border border-white/10 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 flex flex-col h-full relative">
               <div className="absolute top-4 left-4 z-10">
@@ -224,9 +235,9 @@ export default function Home() {
                 </span>
               </div>
               <div className="relative h-48 lg:h-56 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Clases Personalizadas" 
+                <img
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200"
+                  alt="Clases Personalizadas"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent"></div>
@@ -234,7 +245,7 @@ export default function Home() {
                   <p className="text-white font-bold text-lg lg:text-xl leading-tight">Clases Personalizadas</p>
                 </div>
               </div>
-              
+
               <div className="p-5 lg:p-6 flex flex-col flex-grow bg-navy">
                 <p className="text-slate-400 text-xs lg:text-sm leading-relaxed mb-6">
                   Sesiones 1-a-1 diseñadas para resolver tus retos específicos con tus propios datos.
@@ -281,9 +292,9 @@ export default function Home() {
             </div>
             <div className="relative flex items-center justify-center lg:justify-end">
               <div className="absolute -inset-10 bg-primary/5 rounded-full blur-3xl opacity-50"></div>
-              <img 
-                src="/methodology.png" 
-                alt="Collaboration" 
+              <img
+                src="/methodology.png"
+                alt="Collaboration"
                 className="relative rounded-3xl shadow-2xl z-10 w-full max-w-md lg:max-w-none h-auto"
               />
             </div>
@@ -296,7 +307,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-slate-50 rounded-[3rem] p-8 lg:p-16 border border-slate-200 shadow-sm relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-            
+
             <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
               <div>
                 <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-6">
@@ -306,10 +317,10 @@ export default function Home() {
                   ¿Necesitas un enfoque <span className="text-primary">100% a tu medida?</span>
                 </h2>
                 <p className="text-slate-500 text-base lg:text-xl leading-relaxed mb-8">
-                  Ofrecemos clases personalizadas y mentorías uno a uno diseñadas para resolver tus desafíos específicos en el trabajo o proyectos propios. 
+                  Ofrecemos clases personalizadas y mentorías uno a uno diseñadas para resolver tus desafíos específicos en el trabajo o proyectos propios.
                   Aprende a tu ritmo, con tus propios datos y con un experto a tu disposición.
                 </p>
-                
+
                 <ul className="space-y-4 mb-10">
                   {[
                     'Resolución de dudas específicas en tiempo real',
@@ -327,9 +338,9 @@ export default function Home() {
                 </ul>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="https://wa.me/573003085247?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas." 
-                    target="_blank" 
+                  <a
+                    href="https://wa.me/573003085247?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas."
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-2xl transition-all duration-300 shadow-xl shadow-green-500/20 flex items-center justify-center gap-3 group"
                   >
@@ -342,9 +353,9 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl opacity-50"></div>
                 <div className="relative bg-white p-4 rounded-[2.5rem] shadow-2xl border border-slate-100">
-                  <img 
-                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200" 
-                    alt="Clases Personalizadas" 
+                  <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200"
+                    alt="Clases Personalizadas"
                     className="rounded-[2rem] w-full h-auto object-cover aspect-video"
                   />
                   <div className="absolute -bottom-6 -right-6 bg-navy text-white p-6 rounded-3xl shadow-xl max-w-[200px]">
@@ -365,7 +376,7 @@ export default function Home() {
       <section className="py-16 lg:py-24 bg-navy text-white relative overflow-hidden mx-4 lg:mx-6 rounded-[2rem] lg:rounded-[2.5rem]">
         <div className="absolute top-0 right-0 w-[300px] lg:w-[400px] h-[300px] lg:h-[400px] bg-primary/20 rounded-full blur-[80px] lg:blur-[100px] -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-[200px] lg:w-[300px] h-[200px] lg:h-[300px] bg-primary-light/10 rounded-full blur-[80px] lg:blur-[100px] translate-y-1/2 -translate-x-1/2" />
-        
+
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <div className="inline-flex items-center justify-center w-16 lg:w-20 h-16 lg:h-20 rounded-2xl lg:rounded-3xl bg-primary/20 mb-6 lg:mb-8 border border-primary/30">
             <Monitor className="w-8 lg:w-10 h-8 lg:h-10 text-primary-light" />
