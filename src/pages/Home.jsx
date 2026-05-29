@@ -93,11 +93,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-8 lg:py-16 grid lg:grid-cols-2 items-center gap-12">
           <div className="relative z-10">
             {/* badge */}
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-6 lg:mb-8">
+            {/* <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-6 lg:mb-8">
               <span className="text-primary text-[10px] lg:text-xs font-semibold tracking-wider uppercase">Career Growth</span>
               <span className="w-1 h-1 bg-primary rounded-full"></span>
               <span className="text-primary/80 text-[10px] lg:text-xs font-bold">+40% Avg Salary Increase</span>
-            </div>
+            </div> */}
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6 text-navy">
               Domina el análisis y visualización de datos con{' '}
@@ -135,7 +135,7 @@ export default function Home() {
                 alt="Data Analysis Dashboard"
                 className="rounded-2xl w-full h-auto object-cover aspect-[4/3]"
               />
-              <div className="absolute top-4 lg:top-8 right-4 lg:right-8 bg-white/90 backdrop-blur-md p-3 lg:p-4 rounded-2xl shadow-xl border border-white/50 animate-bounce-slow">
+              {/* <div className="absolute top-4 lg:top-8 right-4 lg:right-8 bg-white/90 backdrop-blur-md p-3 lg:p-4 rounded-2xl shadow-xl border border-white/50 animate-bounce-slow">
                 <div className="flex items-center gap-3">
                   <div className="w-8 lg:w-10 h-8 lg:h-10 rounded-full bg-primary/20 flex items-center justify-center">
                     <TrendingUp className="w-4 lg:w-5 h-4 lg:h-5 text-primary" />
@@ -145,7 +145,7 @@ export default function Home() {
                     <p className="text-base lg:text-xl font-bold text-navy">+28.4%</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
