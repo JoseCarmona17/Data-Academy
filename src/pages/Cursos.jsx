@@ -116,9 +116,7 @@ export default function Cursos() {
       <section className="py-10 lg:py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {courses.map((c) => (
-              <CourseItem key={c.title} c={c} />
-            ))}
+            
             
             {/* Manual Card for Personalized Classes */}
             <div className="group flex flex-col bg-navy rounded-[2rem] border-2 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 border-white/10 hover:border-primary/40 relative overflow-hidden h-full">
@@ -185,6 +183,9 @@ export default function Cursos() {
                 </div>
               </div>
             </div>
+            {courses.map((c) => (
+              <CourseItem key={c.title} c={c} />
+            ))}
           </div>
         </div>
       </section>
