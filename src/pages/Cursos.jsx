@@ -105,9 +105,9 @@ export default function Cursos() {
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-6">
             <span className="text-primary text-[10px] lg:text-xs font-bold uppercase tracking-widest">Formación de Élite</span>
           </div>
-          <h1 className="text-3xl lg:text-6xl font-bold text-navy mb-6 tracking-tight leading-tight">Nuestros Cursos</h1>
+          <h1 className="text-3xl lg:text-6xl font-bold text-navy mb-6 tracking-tight leading-tight">Cursos y Clases Personalizadas</h1>
           <p className="text-slate-500 text-base lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            Programas intensivos diseñados para transformar tu perfil profesional con las habilidades técnicas más demandadas del mercado.
+            Encuentra el formato ideal para ti: accede a cursos prácticos a tu ritmo o recibe acompañamiento personalizado adaptado a tus necesidades.
           </p>
         </div>
       </section>
@@ -117,7 +117,10 @@ export default function Cursos() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             
-            
+            {courses.map((c) => (
+              <CourseItem key={c.title} c={c} />
+            ))}
+
             {/* Manual Card for Personalized Classes */}
             <div className="group flex flex-col bg-navy rounded-[2rem] border-2 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 border-white/10 hover:border-primary/40 relative overflow-hidden h-full">
               <div className="absolute top-4 left-4 z-10">
@@ -183,9 +186,7 @@ export default function Cursos() {
                 </div>
               </div>
             </div>
-            {courses.map((c) => (
-              <CourseItem key={c.title} c={c} />
-            ))}
+            
           </div>
         </div>
       </section>

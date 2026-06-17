@@ -19,7 +19,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { courses } from '../data/courses'
 
 const tools = [
-  { name: 'Microsoft Excel', icon: <FileSpreadsheet className="w-6 h-6" />, color: 'from-primary to-primary-dark'},
+  { name: 'Microsoft Excel', icon: <FileSpreadsheet className="w-6 h-6" />, color: 'from-primary to-primary-dark' },
   { name: 'Power BI', icon: <BarChart3 className="w-6 h-6" />, color: 'from-yellow-400 to-orange-500' },
   { name: 'Google Sheets', icon: <FileSpreadsheet className="w-6 h-6" />, color: 'from-blue-400 to-blue-600' },
   { name: 'Data Studio (Looker Studio)', icon: <Search className="w-6 h-6" />, color: 'from-purple-400 to-purple-600' },
@@ -225,7 +225,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 
-             {/* Manual Card for Personalized Classes */}
+            {courses.map((c) => (
+              <CourseCard key={c.title} course={c} />
+            ))}
+
+            {/* Manual Card for Personalized Classes */}
             <div className="group bg-navy rounded-[2rem] border border-white/10 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 flex flex-col h-full relative">
               <div className="absolute top-4 left-4 z-10">
                 <span className="text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm bg-primary text-white">
@@ -262,9 +266,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {courses.map((c) => (
-              <CourseCard key={c.title} course={c} />
-            ))}
 
           </div>
         </div>
@@ -375,7 +376,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA FINAL ── */}
-      <section className="py-16 lg:py-24 bg-navy text-white relative overflow-hidden mx-4 lg:mx-6 rounded-[2rem] lg:rounded-[2.5rem]">
+      <section className="py-16 lg:py-24 bg-navy text-white relative overflow-hidden mx-4 lg:mx-6 rounded-[2rem] lg:rounded-[2.5rem] mb-16">
         <div className="absolute top-0 right-0 w-[300px] lg:w-[400px] h-[300px] lg:h-[400px] bg-primary/20 rounded-full blur-[80px] lg:blur-[100px] -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-[200px] lg:w-[300px] h-[200px] lg:h-[300px] bg-primary-light/10 rounded-full blur-[80px] lg:blur-[100px] translate-y-1/2 -translate-x-1/2" />
 
