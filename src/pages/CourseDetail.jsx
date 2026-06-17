@@ -101,7 +101,7 @@ export default function CourseDetail() {
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto px-8 lg:px-10 py-3 lg:py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl lg:rounded-2xl transition-all duration-300 shadow-xl shadow-primary/20 hover:-translate-y-1 text-sm lg:text-lg text-center"
                 >
-                  Inscribirme ahora - {course.price}
+                  Ver oferta
                 </a>
               </div>
             </div>

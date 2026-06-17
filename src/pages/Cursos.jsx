@@ -14,9 +14,9 @@ import { courses } from '../data/courses'
 
 const learningItems = [
   { icon: <Brain className="w-8 h-8 text-primary" />, title: 'Análisis Crítico', desc: 'Interpreta grandes volúmenes de datos para tomar decisiones empresariales fundamentadas.' },
-  { icon: <Settings className="w-8 h-8 text-primary" />, title: 'Automatización', desc: 'Crea macros y flujos de trabajo que reduzcan horas de trabajo manual en minutos.' },
+  { icon: <Settings className="w-8 h-8 text-primary" />, title: 'Automatización', desc: 'Automatiza tus reportes diarios y flujos de información, transformando horas de trabajo manual y operativo en solo minutos.' },
   { icon: <Layout className="w-8 h-8 text-primary" />, title: 'Visualización', desc: 'Domina el arte de contar historias con datos a través de dashboards de alto impacto.' },
-  { icon: <Database className="w-8 h-8 text-primary" />, title: 'Gestión de Datos', desc: 'Conexión, limpieza y modelado desde diversas fuentes para un análisis íntegro.' },
+  { icon: <Database className="w-8 h-8 text-primary" />, title: 'Gestión de Datos', desc: 'Domina la conexión, limpieza y modelado de datos desde múltiples fuentes para garantizar análisis rápidos, confiables y sin errores.' },
 ]
 
 function CourseItem({ c }) {
@@ -71,7 +71,7 @@ function CourseItem({ c }) {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div>
             <p className="text-lg lg:text-xl font-bold text-navy tracking-tight">{c.price}</p>
-            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Inscripción</p>
+            {/* <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Inscripción</p> */}
           </div>
           <div className="w-full sm:w-auto flex gap-2">
             <Link
@@ -87,7 +87,7 @@ function CourseItem({ c }) {
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none px-3.5 py-2.5 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-primary/10 flex items-center justify-center gap-2 text-[11px]"
             >
-              Comprar
+              Ver oferta
             </a>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function Cursos() {
                 </div>
 
                 <h2 className="text-lg font-bold text-white group-hover:text-primary transition-colors min-h-[2.5rem] lg:min-h-[3rem] leading-tight mb-2">
-                  Asesoría y Clases 1-a-1 Personalizadas
+                  Asesoría y Clases 1 a 1 Personalizadas
                 </h2>
 
                 <p className="text-slate-400 text-xs lg:text-sm leading-relaxed mb-6">

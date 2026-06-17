@@ -19,13 +19,13 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { courses } from '../data/courses'
 
 const tools = [
-  { name: 'Microsoft Excel', icon: <FileSpreadsheet className="w-6 h-6" />, color: 'from-primary to-primary-dark' },
+  { name: 'Microsoft Excel', icon: <FileSpreadsheet className="w-6 h-6" />, color: 'from-primary to-primary-dark'},
   { name: 'Power BI', icon: <BarChart3 className="w-6 h-6" />, color: 'from-yellow-400 to-orange-500' },
   { name: 'Google Sheets', icon: <FileSpreadsheet className="w-6 h-6" />, color: 'from-blue-400 to-blue-600' },
-  { name: 'Looker Studio', icon: <Search className="w-6 h-6" />, color: 'from-purple-400 to-purple-600' },
+  { name: 'Data Studio (Looker Studio)', icon: <Search className="w-6 h-6" />, color: 'from-purple-400 to-purple-600' },
   { name: 'Análisis y visualización de datos', icon: <Calculator className="w-6 h-6" />, color: 'from-primary-light to-primary' },
   // { name: 'Ofimática Pro', icon: <Briefcase className="w-6 h-6" />, color: 'from-slate-400 to-slate-600' },
-  { name: 'Clases personalizadas', icon: <Briefcase className="w-6 h-6" />, color: 'from-slate-400 to-slate-600' }
+  { name: 'Clases personalizadas', icon: <Briefcase className="w-6 h-6" />, color: 'from-slate-400 to-slate-600', link: '#personalizadas' }
 ]
 
 const methodology = [
@@ -77,7 +77,7 @@ function CourseCard({ course }) {
             className="w-full py-2.5 lg:py-3 bg-primary hover:bg-primary-dark text-white text-center text-[11px] lg:text-xs font-bold rounded-xl transition-all duration-300 shadow-lg shadow-primary/10 flex items-center justify-center gap-2"
           >
             <Info className="w-3.5 h-3.5" />
-            Información del Curso
+            Aprender ahora
           </Link>
         </div>
       </div>
@@ -107,7 +107,7 @@ export default function Home() {
             </h1>
 
             <p className="text-slate-600 text-base lg:text-xl leading-relaxed mb-8 lg:mb-10 max-w-xl">
-              Cursos prácticos diseñados para convertirte en un experto en Excel, Power BI y análisis estratégico.
+              Aprende a crear dashboards desde cero y analiza tus datos para <strong> destacar en tu entorno laboral </strong> a través de cursos prácticos y mentorías a tu medida.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -115,7 +115,7 @@ export default function Home() {
                 to="/cursos"
                 className="inline-flex items-center justify-center gap-2 px-6 lg:px-8 py-3 lg:py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-primary/20 hover:-translate-y-0.5 text-sm lg:text-base"
               >
-                Inscribirse ahora
+                Aprende ahora
                 <ChevronRight className="w-5 h-5" />
               </Link>
               <Link
@@ -179,16 +179,17 @@ export default function Home() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="mb-12 lg:mb-16">
-            <h2 className="text-2xl lg:text-4xl font-bold text-navy mb-4">Herramientas que dominarás</h2>
+            <h2 className="text-2xl lg:text-4xl font-bold text-navy mb-4">Convierte los datos en decisiones inteligentes</h2>
             <p className="text-slate-500 text-sm lg:text-base max-w-2xl mx-auto">
-              Te enseñamos a utilizar las plataformas líderes en el mercado para que puedas generar impacto inmediato en cualquier organización.
+              Accede a clases personalizadas y cursos prácticos y para analizar información, automatizar reportes y crear dashboards.
             </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 lg:gap-6">
             {tools.map((t) => (
-              <div
+              <a
                 key={t.name}
+                href={t.link || '#'}
                 className="group flex flex-col items-center gap-3 lg:gap-4 p-6 lg:p-8 bg-white rounded-2xl border border-slate-100 hover:border-primary/20 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-12 lg:w-14 h-12 lg:h-14 rounded-2xl bg-slate-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
@@ -197,7 +198,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-[10px] lg:text-xs font-bold text-navy uppercase tracking-wider text-center">{t.name}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -208,9 +209,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 lg:gap-8 mb-8 lg:mb-12">
             <div>
-              <h2 className="text-2xl lg:text-4xl font-bold text-navy mb-4">Cursos destacados</h2>
+              <h2 className="text-2xl lg:text-4xl font-bold text-navy mb-4">Cursos y Clases Personalizadas</h2>
               <p className="text-slate-500 text-sm lg:text-base max-w-xl">
-                Programas intensivos diseñados para llevar tus habilidades de cero a profesional en tiempo récord.
+                Encuentra el formato ideal para ti: accede a cursos prácticos a tu ritmo o recibe acompañamiento personalizado adaptado a tus necesidades.
               </p>
             </div>
             <Link
@@ -223,11 +224,8 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {courses.map((c) => (
-              <CourseCard key={c.title} course={c} />
-            ))}
 
-            {/* Manual Card for Personalized Classes */}
+             {/* Manual Card for Personalized Classes */}
             <div className="group bg-navy rounded-[2rem] border border-white/10 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 flex flex-col h-full relative">
               <div className="absolute top-4 left-4 z-10">
                 <span className="text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm bg-primary text-white">
@@ -248,7 +246,7 @@ export default function Home() {
 
               <div className="p-5 lg:p-6 flex flex-col flex-grow bg-navy">
                 <p className="text-slate-400 text-xs lg:text-sm leading-relaxed mb-6">
-                  Sesiones 1-a-1 diseñadas para resolver tus retos específicos con tus propios datos.
+                  Sesiones 1 a 1 diseñadas para resolver tus retos específicos con tus propios datos.
                 </p>
 
                 <div className="mt-auto space-y-3">
@@ -264,6 +262,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            {courses.map((c) => (
+              <CourseCard key={c.title} course={c} />
+            ))}
+
           </div>
         </div>
       </section>
@@ -303,7 +305,7 @@ export default function Home() {
       </section>
 
       {/* ── CLASES PERSONALIZADAS ── */}
-      <section id="personalizadas" className="py-16 lg:py-24 bg-white relative overflow-hidden">
+      <section id="personalizadas" className="py-16 lg:py-24 bg-white relative overflow-hidden scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-slate-50 rounded-[3rem] p-8 lg:p-16 border border-slate-200 shadow-sm relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>

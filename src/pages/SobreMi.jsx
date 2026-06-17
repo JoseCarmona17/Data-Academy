@@ -32,7 +32,7 @@ const tools = [
   },
   {
     icon: <Zap className="w-7 h-7 text-primary" />,
-    name: 'Data Studio / Looker',
+    name: 'Data Studio / Looker Studio',
     desc: 'Dashboards dinámicos conectados a Google Analytics, Sheets y BigQuery de forma sencilla.',
   },
 ]
@@ -302,7 +302,7 @@ export default function SobreMi() {
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
-              href="/#personalizadas"
+              href="https://wa.me/573003085247?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20las%20clases%20personalizadas."
               id="cta-clases-personalizadas"
               className="px-8 py-3.5 bg-white text-primary font-bold rounded-xl transition-all duration-300 hover:bg-slate-50 flex items-center justify-center text-sm"
             >
